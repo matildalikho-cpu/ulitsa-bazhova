@@ -800,19 +800,25 @@
     .site-footer {
       padding: 34px 30px;
       display: grid;
-      grid-template-columns: minmax(260px, 1fr) auto auto;
+      grid-template-columns: minmax(260px, 1fr) auto;
       align-items: center;
-      gap: 34px;
+      gap: 24px;
       background: var(--orange);
       color: var(--ink);
       font-size: 15px;
     }
     .site-footer a { color: var(--ink); text-decoration-color: var(--violet); text-decoration-thickness: 3px; text-underline-offset: 5px; }
     .site-footer a:hover, .site-footer a:focus-visible { color: var(--violet); }
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
     .footer-maker {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
       padding: 0;
       background: transparent;
       border: 0;
@@ -823,8 +829,8 @@
       display: block;
       height: auto;
     }
-    .footer-maker-label { width: 130px; }
-    .footer-maker-logo { width: 260px; }
+    .footer-maker-label { width: 105px; }
+    .footer-maker-logo { width: 210px; }
 
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 500ms ease, transform 500ms ease; }
     .reveal.is-visible { opacity: 1; transform: none; }
@@ -838,7 +844,6 @@
       .portrait-caption { right: 1%; bottom: 29%; width: min(340px, 48%); font-size: 14px; }
       .route-card:nth-child(1), .route-card:nth-child(2), .route-card:nth-child(3), .route-card:nth-child(4) { grid-column: span 6; transform: none; }
       .site-footer { grid-template-columns: minmax(260px, 1fr) auto; }
-      .footer-maker { grid-column: 1 / -1; justify-self: end; }
     }
 
     @media (max-width: 760px) {
@@ -918,9 +923,9 @@
       .format-disclaimer-inner { grid-template-columns: 1fr; gap: 18px; }
       .format-sketch { width: min(72%, 250px); margin-top: 4px; }
       .site-footer { display: flex; align-items: flex-start; flex-direction: column; }
-      .footer-maker { width: min(100%, 420px); gap: 12px; justify-content: space-between; box-sizing: border-box; }
+      .footer-maker { width: min(100%, 330px); gap: 10px; justify-content: space-between; box-sizing: border-box; }
       .footer-maker-label { width: 29%; }
-      .footer-maker-logo { width: calc(71% - 12px); }
+      .footer-maker-logo { width: calc(71% - 10px); }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1157,9 +1162,12 @@
 
   </main>
 
+  <!-- footer-link-left-compact-v2 -->
   <footer class="site-footer">
-    <strong>Алёна Кунилова — авторские прогулки по Екатеринбургу с 2018 года</strong>
-    <a href="https://t.me/ulitsa_bazhova" target="_blank" rel="noreferrer">Паблик «Улица Бажова» <span aria-hidden="true">↗</span></a>
+    <div class="footer-info">
+      <strong>Алёна Кунилова — авторские прогулки по Екатеринбургу с 2018 года</strong>
+      <a href="https://t.me/ulitsa_bazhova" target="_blank" rel="noreferrer">Паблик «Улица Бажова» <span aria-hidden="true">↗</span></a>
+    </div>
     <div class="footer-maker" aria-label="Создание сайта — Bro Design">
       <img class="footer-maker-label" src="site-creation.png" alt="Создание сайта">
       <img class="footer-maker-logo" src="bro-design.png" alt="Bro Design">
