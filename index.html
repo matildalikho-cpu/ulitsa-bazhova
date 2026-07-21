@@ -673,8 +673,12 @@
     .review-section > .section-label {
       display: block;
       max-width: 1240px;
-      margin: 0 auto 30px;
+      margin: 0 auto 12px;
       color: var(--violet);
+    }
+    .review-section > h2 {
+      max-width: 1240px;
+      margin: 0 auto 56px;
     }
     .reviews-grid {
       max-width: 1240px;
@@ -704,6 +708,9 @@
       font-weight: 900;
       line-height: 1.02;
       letter-spacing: -1.8px;
+      hyphens: none;
+      overflow-wrap: normal;
+      word-break: normal;
     }
     .review-card:first-child blockquote { font-size: clamp(36px, 3.7vw, 58px); }
     .review-card--featured { grid-column: 1 / -1; transform: rotate(-0.4deg); }
@@ -713,8 +720,6 @@
       font-size: clamp(28px, 2.2vw, 34px);
       line-height: 1.08;
       letter-spacing: -1px;
-      hyphens: auto;
-      overflow-wrap: break-word;
     }
     .review-card footer { margin-top: 28px; font-size: 18px; font-weight: 800; }
 
@@ -907,7 +912,7 @@
       .gallery-story-link .story-arrow { font-size: 42px; }
       .reviews-grid { grid-template-columns: 1fr; gap: 28px; }
       .review-card, .review-card:nth-child(even), .review-card--featured, .review-card--short { grid-column: 1; padding: 34px 28px; box-shadow: 9px 9px 0 var(--pink); transform: none; }
-      .review-card blockquote, .review-card:first-child blockquote, .review-card--featured blockquote, .review-card--short blockquote { font-size: 34px; }
+      .review-card blockquote, .review-card:first-child blockquote, .review-card--featured blockquote, .review-card--short blockquote { font-size: clamp(26px, 8vw, 34px); }
       .contact-cta { width: 100%; justify-content: space-between; }
       .format-disclaimer { margin-top: 36px; padding: 36px 18px 40px; }
       .format-disclaimer-inner { grid-template-columns: 1fr; gap: 18px; }
@@ -1117,15 +1122,14 @@
     </section>
 
     <section class="section review-section" id="reviews" aria-labelledby="review-title">
-      <span class="section-label" id="review-title">Отзывы и рекомендации</span>
+      <span class="section-label">Рекомендации участников прогулки</span>
+      <h2 id="review-title">Отзывы</h2>
       <div class="reviews-grid">
         <article class="review-card reveal">
           <blockquote>«Спасибо огромное за экскурсию — было очень интересно, вы очень классно ведёте. Расширяйте маршруты: с удовольствием ещё пойдём и всем передадим»</blockquote>
-          <footer>Участница прогулки · отзыв в личных сообщениях</footer>
         </article>
         <article class="review-card reveal">
           <blockquote>«Алёна, добрый вечер! Ещё раз хочу поблагодарить за отличную, информативную и очень интересную экскурсию! С удовольствием провели время, с пользой! У Вас отличная подготовка, столько нового узнали! Спасибо и всех благ!»</blockquote>
-          <footer>Участница прогулки · отзыв в личных сообщениях</footer>
         </article>
         <article class="review-card review-card--featured reveal">
           <blockquote>«Удивительно необычная прогулка по улице Бажова. Проводит её жительница этой улицы Алёна Кунилова. На протяжении последних месяцев она собирала по крупицам сведения о домах, кварталах, заводах и учреждениях, находившихся на улице Бажова за полтора столетия её существования. Но это не просто экскурсия. Это прежде всего разговор о том месте, где живут люди»</blockquote>
@@ -1133,15 +1137,12 @@
         </article>
         <article class="review-card review-card--short reveal">
           <blockquote>«Спасибо вам большое! Вы настоящий эксперт и исследователь)»</blockquote>
-          <footer>Участник прогулки</footer>
         </article>
         <article class="review-card review-card--short reveal">
           <blockquote>«Алёна, благодарим за познавательную экскурсию»</blockquote>
-          <footer>Участник прогулки</footer>
         </article>
         <article class="review-card review-card--short reveal">
           <blockquote>«Рекомендую чудесную прогулку по улице Бажова с моей соседкой!»</blockquote>
-          <footer>Рекомендация участника прогулки</footer>
         </article>
       </div>
     </section>
