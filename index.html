@@ -410,7 +410,7 @@
     .section-label {
       display: inline-block;
       margin-bottom: 22px;
-      color: var(--pink);
+      color: var(--ink);
       font-family: "Neucha", Arial, sans-serif;
       font-weight: 900;
       font-size: 20px;
@@ -427,6 +427,10 @@
     }
 
     .routes-section { background: var(--violet); color: var(--paper); }
+    .routes-section > .routes-head .section-label,
+    .gallery-section .section-label,
+    .review-section > .section-label,
+    .contact-section .section-label { color: white; }
     .routes-head {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -501,12 +505,13 @@
     .walk-format:first-child { background: var(--paper); transform: rotate(-1deg); }
     .walk-format:last-child { background: var(--acid); transform: rotate(1deg); }
     .walk-format .format-kicker {
-      color: var(--pink);
+      color: var(--ink);
       font-family: "Neucha", Arial, sans-serif;
       font-size: 16px;
       font-weight: 900;
       text-transform: uppercase;
     }
+    .walk-format:last-child .format-kicker { color: white; }
     .walk-format h3 {
       margin: 15px 0 14px;
       font-family: var(--display);
@@ -655,7 +660,7 @@
     .principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 3px solid var(--ink); }
     .principle { min-height: 320px; padding: 32px 26px; border-right: 2px solid var(--ink); }
     .principle:last-child { border-right: 0; }
-    .principle .num { color: var(--pink); font-family: "Neucha", Arial, sans-serif; font-weight: 900; }
+    .principle .num { color: var(--ink); font-family: "Neucha", Arial, sans-serif; font-weight: 900; }
     .principle h3 { font-family: var(--display); font-size: 48px; line-height: 0.9; margin: 50px 0 18px; letter-spacing: -2px; }
     .principle p { font-size: 18px; line-height: 1.45; max-width: 360px; }
 
@@ -728,7 +733,7 @@
       display: block;
       max-width: 1240px;
       margin: 0 auto 12px;
-      color: var(--violet);
+      color: white;
     }
     .review-section > h2 {
       max-width: 1240px;
@@ -1144,7 +1149,7 @@
               <li>Куратор, продюсер и лектор проекта Музея истории Екатеринбурга <a href="https://youtu.be/72W1vbg3erE" target="_blank" rel="noreferrer">«Лаборатория воспоминаний»</a> (2019–2022)</li>
               <li>Редактор проекта <a href="https://историясолидарности.рф/" target="_blank" rel="noreferrer">«История солидарности»</a> — книги и сайта о сообществах Екатеринбурга (2021)</li>
               <li>Редактор проекта «Код города» — книги о ДНК Екатеринбурга (планируется к публикации)</li>
-              <li>Автор исследовательского материала <a href="https://tatlin.ru/articles/zdes_rabotali_izvestnye_sverdlovskie_skulptory" target="_blank" rel="noreferrer">«Здесь работали известные свердловские скульпторы»</a> для издательства TATLIN (2021)</li>
+              <li>Автор исследования <a href="https://tatlin.ru/articles/zdes_rabotali_izvestnye_sverdlovskie_skulptory" target="_blank" rel="noreferrer">«Здесь работали известные свердловские скульпторы»</a> для издательства TATLIN (2021)</li>
             </ul>
             <div class="project-gallery" aria-label="Фотографии проектов Алёны Куниловой">
               <figure>
@@ -1221,7 +1226,7 @@
     </section>
 
     <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-      <span class="section-label" style="color: var(--acid)">До встречи на улице</span>
+      <span class="section-label">До встречи на улице</span>
       <h2 id="contact-title">Приходите гулять</h2>
       <p>И подписывайтесь на паблик <a href="https://t.me/ulitsa_bazhova" target="_blank" rel="noreferrer">«Улица Бажова»</a>.</p>
       <a class="contact-cta" href="https://t.me/AlyonaRocket" target="_blank" rel="noreferrer">Написать организатору <span aria-hidden="true">→</span></a>
