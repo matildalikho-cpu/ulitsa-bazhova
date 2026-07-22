@@ -247,6 +247,7 @@
       font-size: 19px;
       line-height: 1.42;
     }
+    .hero-lead .nowrap { white-space: nowrap; }
     .primary-cta {
       min-width: 340px;
       display: inline-flex;
@@ -452,22 +453,22 @@
     .route-card img.route-archive { object-position: center 51%; }
     .route-card img.route-maya { object-position: center 58%; }
     .route-number {
+      align-self: flex-start;
+      display: inline-block;
       margin-top: 20px;
+      padding: 7px 12px 6px;
+      background: var(--ink);
+      color: white;
       font-family: "Neucha", Arial, sans-serif;
       font-weight: 900;
-      color: var(--pink);
-      text-transform: uppercase;
-    }
-    .route-card:first-child .route-number {
-      align-self: flex-start;
-      padding: 7px 12px 6px;
-      background: var(--violet);
-      color: white;
       line-height: 1;
+      text-transform: uppercase;
       transform: rotate(-1deg);
     }
-    .route-card:nth-child(3) .route-number { color: var(--acid); }
-    .route-card:nth-child(4) .route-number { color: var(--blue); }
+    .route-card:nth-child(1) .route-number { background: var(--violet); }
+    .route-card:nth-child(2) .route-number { background: var(--orange); }
+    .route-card:nth-child(3) .route-number,
+    .route-card:nth-child(4) .route-number { background: var(--ink); }
     .route-card h3 {
       margin: 10px 0 14px;
       font-family: var(--display);
@@ -1023,7 +1024,7 @@
         </a>
         <div class="date-sticker"><b>Прогулки с местным жителем по городским кварталам и историям</b></div>
         <h1 id="hero-title">Обыкновенная улица Бажова и другие непарадные маршруты и истории Екатеринбурга</h1>
-        <p class="hero-lead">Настоящий дух города — не на главных улицах. Чтобы его почувствовать, нужно зайти в кварталы и дворы, заметить приметы времени, услышать живые истории тех, кто здесь жил и живёт. Здесь нужен проводник, который знает, куда заглянуть, и умеет связать отдельные детали в цельную историю. После такой прогулки даже давно знакомые места выглядят иначе: начинаешь по-новому смотреть на город, его прошлое и людей. И каждому он открывается по-своему — поэтому двух одинаковых прогулок не бывает.</p>
+        <p class="hero-lead">Настоящий дух города — не на главных улицах. Чтобы его почувствовать, нужно зайти в кварталы и дворы, заметить приметы времени, услышать живые истории тех, кто здесь жил и живёт. Здесь нужен проводник, который знает, куда заглянуть, и умеет связать отдельные детали в цельную историю. После такой прогулки даже давно знакомые места выглядят иначе: начинаешь по-новому смотреть на город, его прошлое и людей. И каждому он открывается <span class="nowrap">по-своему</span> — поэтому двух одинаковых прогулок не бывает.</p>
         <a class="primary-cta" href="#routes">Пойдем гулять? <span aria-hidden="true">→</span></a>
       </div>
 
