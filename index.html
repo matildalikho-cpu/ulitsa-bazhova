@@ -29,6 +29,8 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="neucha-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="neucha-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <title>Авторские прогулки по Екатеринбургу с Алёной Куниловой</title>
   <script type="application/ld+json">
     {
@@ -41,6 +43,23 @@
     }
   </script>
   <style>
+    @font-face {
+      font-family: "Neucha";
+      font-style: normal;
+      font-display: swap;
+      font-weight: 400;
+      src: url("neucha-cyrillic-400-normal.woff2") format("woff2");
+      unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+    }
+    @font-face {
+      font-family: "Neucha";
+      font-style: normal;
+      font-display: swap;
+      font-weight: 400;
+      src: url("neucha-latin-400-normal.woff2") format("woff2");
+      unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
+
     :root {
       --paper: #f4f0e8;
       --ink: #111111;
@@ -341,7 +360,7 @@
       display: inline-block;
       margin-bottom: 22px;
       color: var(--pink);
-      font-family: "Comic Sans MS", Arial, sans-serif;
+      font-family: "Neucha", Arial, sans-serif;
       font-weight: 900;
       font-size: 20px;
       text-transform: uppercase;
@@ -384,7 +403,7 @@
     .route-card img.route-maya { object-position: center 58%; }
     .route-number {
       margin-top: 20px;
-      font-family: "Comic Sans MS", Arial, sans-serif;
+      font-family: "Neucha", Arial, sans-serif;
       font-weight: 900;
       color: var(--pink);
       text-transform: uppercase;
@@ -424,7 +443,7 @@
     .walk-format:last-child { background: var(--acid); transform: rotate(1deg); }
     .walk-format .format-kicker {
       color: var(--pink);
-      font-family: "Comic Sans MS", Arial, sans-serif;
+      font-family: "Neucha", Arial, sans-serif;
       font-size: 16px;
       font-weight: 900;
       text-transform: uppercase;
@@ -556,7 +575,7 @@
     }
     .project-gallery figcaption {
       margin-top: 12px;
-      font-family: "Comic Sans MS", Arial, sans-serif;
+      font-family: "Neucha", Arial, sans-serif;
       font-size: 16px;
       font-weight: 900;
       line-height: 1.2;
@@ -577,7 +596,7 @@
     .principle-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 3px solid var(--ink); }
     .principle { min-height: 320px; padding: 32px 26px; border-right: 2px solid var(--ink); }
     .principle:last-child { border-right: 0; }
-    .principle .num { color: var(--pink); font-family: "Comic Sans MS", Arial, sans-serif; font-weight: 900; }
+    .principle .num { color: var(--pink); font-family: "Neucha", Arial, sans-serif; font-weight: 900; }
     .principle h3 { font-family: var(--display); font-size: 48px; line-height: 0.9; margin: 50px 0 18px; letter-spacing: -2px; }
     .principle p { font-size: 18px; line-height: 1.45; max-width: 360px; }
 
@@ -631,7 +650,7 @@
       box-shadow: 17px 17px 0 var(--orange);
     }
     .gallery-story-link .story-kicker {
-      font-family: "Comic Sans MS", Arial, sans-serif;
+      font-family: "Neucha", Arial, sans-serif;
       font-size: 17px;
       line-height: 1.15;
       font-weight: 900;
@@ -661,43 +680,51 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 38px;
-      align-items: start;
+      gap: 28px;
+      align-items: stretch;
     }
     .review-card {
-      grid-column: span 6;
+      grid-column: span 5;
       margin: 0;
-      padding: 48px 44px;
+      padding: 32px 34px;
       background: var(--paper);
       border: 3px solid var(--ink);
-      box-shadow: 16px 16px 0 var(--pink);
-      transform: rotate(-1deg);
+      box-shadow: 11px 11px 0 var(--pink);
+      transform: rotate(-0.6deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .review-card:nth-child(even) {
-      box-shadow: -16px 16px 0 var(--violet);
-      transform: translateY(20px) rotate(1deg);
+      box-shadow: -11px 11px 0 var(--violet);
+      transform: rotate(0.6deg);
     }
     .review-card blockquote {
       margin: 0;
-      font-family: var(--display);
-      font-size: clamp(31px, 3.2vw, 50px);
-      font-weight: 900;
-      line-height: 1.02;
-      letter-spacing: -1.8px;
+      font-family: var(--text);
+      font-size: clamp(20px, 1.55vw, 25px);
+      font-weight: 700;
+      line-height: 1.34;
+      letter-spacing: -0.3px;
       hyphens: none;
       overflow-wrap: normal;
       word-break: normal;
     }
-    .review-card:first-child blockquote { font-size: clamp(36px, 3.7vw, 58px); }
-    .review-card--featured { grid-column: 1 / -1; transform: rotate(-0.4deg); }
-    .review-card--featured blockquote { font-size: clamp(28px, 2.7vw, 42px); line-height: 1.08; }
-    .review-card--short { grid-column: span 4; padding: 38px 34px; }
-    .review-card--short blockquote {
-      font-size: clamp(28px, 2.2vw, 34px);
-      line-height: 1.08;
+    .review-card--featured {
+      grid-column: span 7;
+      grid-row: span 3;
+      padding: 46px 44px;
+      background: var(--acid);
+      transform: rotate(-0.4deg);
+    }
+    .review-card--featured blockquote {
+      font-family: var(--display);
+      font-size: clamp(27px, 2.35vw, 37px);
+      font-weight: 900;
+      line-height: 1.13;
       letter-spacing: -1px;
     }
-    .review-card footer { margin-top: 28px; font-size: 18px; font-weight: 800; }
+    .review-card footer { margin-top: 34px; font-size: 17px; line-height: 1.35; font-weight: 800; }
 
     .contact-section { text-align: center; background: var(--blue); color: white; overflow: hidden; }
     .contact-section h2 { max-width: 1050px; margin: 0 auto 34px; }
@@ -896,8 +923,10 @@
       .gallery-story-link strong { font-size: 28px; }
       .gallery-story-link .story-arrow { font-size: 42px; }
       .reviews-grid { grid-template-columns: 1fr; gap: 28px; }
-      .review-card, .review-card:nth-child(even), .review-card--featured, .review-card--short { grid-column: 1; padding: 34px 28px; box-shadow: 9px 9px 0 var(--pink); transform: none; }
-      .review-card blockquote, .review-card:first-child blockquote, .review-card--featured blockquote, .review-card--short blockquote { font-size: clamp(26px, 8vw, 34px); }
+      .review-card, .review-card:nth-child(even), .review-card--featured { grid-column: 1; grid-row: auto; padding: 30px 26px; box-shadow: 8px 8px 0 var(--pink); transform: none; }
+      .review-card blockquote { font-size: clamp(19px, 5.3vw, 23px); line-height: 1.36; }
+      .review-card--featured blockquote { font-size: clamp(24px, 7vw, 30px); line-height: 1.17; }
+      .review-card footer { margin-top: 26px; font-size: 15px; }
       .contact-cta { width: 100%; justify-content: space-between; }
       .format-disclaimer { margin-top: 36px; padding: 36px 18px 40px; }
       .format-disclaimer-inner { grid-template-columns: 1fr; gap: 18px; }
@@ -1109,24 +1138,18 @@
       <span class="section-label">Рекомендации участников прогулки</span>
       <h2 id="review-title">Отзывы</h2>
       <div class="reviews-grid">
-        <article class="review-card reveal">
-          <blockquote>«Спасибо огромное за экскурсию — было очень интересно, вы очень классно ведёте. Расширяйте маршруты: с удовольствием ещё пойдём и всем передадим»</blockquote>
-        </article>
-        <article class="review-card reveal">
-          <blockquote>«Алёна, добрый вечер! Ещё раз хочу поблагодарить за отличную, информативную и очень интересную экскурсию! С удовольствием провели время, с пользой! У Вас отличная подготовка, столько нового узнали! Спасибо и всех благ!»</blockquote>
-        </article>
         <article class="review-card review-card--featured reveal">
-          <blockquote>«Удивительно необычная прогулка по улице Бажова. Проводит её жительница этой улицы Алёна Кунилова. На протяжении последних месяцев она собирала по крупицам сведения о домах, кварталах, заводах и учреждениях, находившихся на улице Бажова за полтора столетия её существования. Но это не просто экскурсия. Это прежде всего разговор о том месте, где живут люди»</blockquote>
+          <blockquote>«Удивительно необычная прогулка по улице Бажова. Проводит её жительница этой улицы Алёна Кунилова. На протяжении последних месяцев она собирала по крупицам сведения о домах, кварталах, заводах и учреждениях, находившихся на улице Бажова за полтора столетия её существования. Но это не просто маршрут. Это прежде всего разговор о том месте, где живут люди»</blockquote>
           <footer>Дмитрий Москвин · руководитель сообщества «Екбгуляем» · о премьере прогулки в 2018 году</footer>
         </article>
-        <article class="review-card review-card--short reveal">
-          <blockquote>«Спасибо вам большое! Вы настоящий эксперт и исследователь)»</blockquote>
+        <article class="review-card reveal">
+          <blockquote>«Спасибо огромное за прогулку — было очень интересно, вы очень классно ведёте. Расширяйте маршруты: с удовольствием ещё пойдём и всем передадим»</blockquote>
         </article>
-        <article class="review-card review-card--short reveal">
-          <blockquote>«Алёна, благодарим за познавательную экскурсию»</blockquote>
+        <article class="review-card reveal">
+          <blockquote>«Десять лет живём рядом и столько нового сегодня открыли для себя. Спасибо!»</blockquote>
         </article>
-        <article class="review-card review-card--short reveal">
-          <blockquote>«Рекомендую чудесную прогулку по улице Бажова с моей соседкой!»</blockquote>
+        <article class="review-card reveal">
+          <blockquote>«Хочу поблагодарить за отличную, информативную и очень интересную прогулку! С удовольствием провели время, с пользой! У Вас отличная подготовка, столько нового узнали!»</blockquote>
         </article>
       </div>
     </section>
