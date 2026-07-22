@@ -267,6 +267,54 @@
     .primary-cta:hover, .primary-cta:focus-visible { transform: translateY(-3px); background: #1739d8; }
     .primary-cta:hover span, .primary-cta:focus-visible span { transform: translateX(8px); }
 
+    .hero-side-collage {
+      position: relative;
+      width: min(100%, 560px);
+      height: 178px;
+      margin-top: 24px;
+      isolation: isolate;
+    }
+    .hero-side-collage figure {
+      position: absolute;
+      margin: 0;
+      padding: 6px;
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      box-shadow: 7px 7px 0 var(--orange);
+      overflow: hidden;
+    }
+    .hero-side-collage img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    .hero-side-collage .hero-side-photo--crowd {
+      width: 40%;
+      left: 0;
+      top: 13px;
+      z-index: 1;
+      transform: rotate(-3deg);
+    }
+    .hero-side-collage .hero-side-photo--crowd img { object-position: center 67%; }
+    .hero-side-collage .hero-side-photo--bazhov {
+      width: 29%;
+      left: 34%;
+      top: 0;
+      z-index: 3;
+      box-shadow: 7px 7px 0 var(--pink);
+      transform: rotate(3deg);
+    }
+    .hero-side-collage .hero-side-photo--bazhov img { object-position: center 43%; }
+    .hero-side-collage .hero-side-photo--reflection {
+      width: 39%;
+      right: 2%;
+      top: 17px;
+      z-index: 2;
+      box-shadow: 7px 7px 0 var(--violet);
+      transform: rotate(-2deg);
+    }
+    .hero-side-collage .hero-side-photo--reflection img { object-position: center 38%; }
+
     .collage {
       position: relative;
       min-height: 700px;
@@ -407,6 +455,14 @@
       font-weight: 900;
       color: var(--pink);
       text-transform: uppercase;
+    }
+    .route-card:first-child .route-number {
+      align-self: flex-start;
+      padding: 7px 12px 6px;
+      background: var(--violet);
+      color: white;
+      line-height: 1;
+      transform: rotate(-1deg);
     }
     .route-card:nth-child(3) .route-number { color: var(--acid); }
     .route-card:nth-child(4) .route-number { color: var(--blue); }
@@ -882,6 +938,10 @@
       .hero h1 { font-size: clamp(36px, 10.5vw, 48px); line-height: 0.98; letter-spacing: -1.8px; margin-top: 22px; }
       .hero-lead { font-size: 17px; line-height: 1.45; max-width: 94%; }
       .primary-cta { min-width: 0; width: 100%; font-size: 21px; }
+      .hero-side-collage { height: 145px; margin-top: 22px; }
+      .hero-side-collage figure { padding: 4px; border-width: 1.5px; box-shadow: 5px 5px 0 var(--orange); }
+      .hero-side-collage .hero-side-photo--bazhov { box-shadow: 5px 5px 0 var(--pink); }
+      .hero-side-collage .hero-side-photo--reflection { box-shadow: 5px 5px 0 var(--violet); }
       .collage { position: relative; left: auto; right: auto; bottom: auto; height: 585px; min-height: 585px; margin: 28px -18px 0; }
       .shape-violet { inset: 15px 0 0 0; }
       .photo-print { width: 58%; left: 4%; top: 46px; }
@@ -965,6 +1025,11 @@
         <h1 id="hero-title">Обыкновенная улица Бажова и другие непарадные маршруты и истории Екатеринбурга</h1>
         <p class="hero-lead">Настоящий дух города — не на главных улицах. Чтобы его почувствовать, нужно зайти в кварталы и дворы, заметить приметы времени, услышать живые истории тех, кто здесь жил и живёт. Здесь нужен проводник, который знает, куда заглянуть, и умеет связать отдельные детали в цельную историю. После такой прогулки даже давно знакомые места выглядят иначе: начинаешь по-новому смотреть на город, его прошлое и людей. И каждому он открывается по-своему — поэтому двух одинаковых прогулок не бывает.</p>
         <a class="primary-cta" href="#routes">Пойдем гулять? <span aria-hidden="true">→</span></a>
+        <div class="hero-side-collage" aria-label="Детали прогулок по Екатеринбургу">
+          <figure class="hero-side-photo--crowd"><img src="hero-left-crowd.jpg?v=1" alt="Участники прогулки рассматривают старый дом" fetchpriority="high"></figure>
+          <figure class="hero-side-photo--bazhov"><img src="hero-left-bazhov.jpg?v=1" alt="Стрит-арт портрет Павла Бажова" fetchpriority="high"></figure>
+          <figure class="hero-side-photo--reflection"><img src="hero-left-reflection.jpg?v=1" alt="Зелёные ветви отражаются в стеклянном фасаде" fetchpriority="high"></figure>
+        </div>
       </div>
 
       <div class="collage">
