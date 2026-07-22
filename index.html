@@ -215,11 +215,11 @@
     }
     .hero h1 {
       margin: 25px 0 22px;
-      max-width: 690px;
+      max-width: 640px;
       font-family: var(--display);
-      font-size: clamp(48px, 4.65vw, 72px);
-      line-height: 0.92;
-      letter-spacing: -3px;
+      font-size: clamp(42px, 3.9vw, 60px);
+      line-height: 0.96;
+      letter-spacing: -2.4px;
       font-weight: 950;
     }
     .hero-lead {
@@ -284,6 +284,25 @@
       clip-path: polygon(1% 2%, 98% 0, 100% 97%, 3% 100%);
     }
     .photo-print img { width: 100%; height: 390px; object-fit: cover; }
+    .boat-print {
+      position: absolute;
+      width: 40%;
+      left: 7%;
+      bottom: 7%;
+      z-index: 4;
+      padding: 10px;
+      background: var(--paper);
+      box-shadow: -10px 10px 0 var(--pink);
+      transform: rotate(4deg);
+      clip-path: polygon(2% 0, 100% 3%, 98% 98%, 0 95%);
+    }
+    .boat-print img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: center 64%;
+    }
     .cutout {
       position: absolute;
       height: 92%;
@@ -797,8 +816,9 @@
 
     @media (max-width: 1080px) {
       .hero { grid-template-columns: 0.86fr 1.14fr; }
-      .hero h1 { font-size: clamp(46px, 5.6vw, 60px); }
+      .hero h1 { font-size: clamp(40px, 4.8vw, 52px); }
       .photo-print { width: 48%; left: 4%; }
+      .boat-print { width: 44%; left: 4%; }
       .cutout { height: 80%; right: -5%; }
       .portrait-caption { right: 1%; bottom: 14%; width: min(340px, 48%); font-size: 14px; }
       .route-card:nth-child(1), .route-card:nth-child(2), .route-card:nth-child(3), .route-card:nth-child(4) { grid-column: span 6; transform: none; }
@@ -832,13 +852,14 @@
       .community-badge span { margin: 0 0 9px -5px; padding: 12px 34px 13px 12px; font-size: 12px; line-height: 1.22; }
       .community-badge span::after { right: 10px; font-size: 23px; }
       .date-sticker { font-size: 16px; padding: 12px 16px; }
-      .hero h1 { font-size: clamp(42px, 12vw, 56px); letter-spacing: -2.5px; margin-top: 22px; }
+      .hero h1 { font-size: clamp(36px, 10.5vw, 48px); line-height: 0.98; letter-spacing: -1.8px; margin-top: 22px; }
       .hero-lead { font-size: 17px; line-height: 1.45; max-width: 94%; }
       .primary-cta { min-width: 0; width: 100%; font-size: 21px; }
       .collage { position: relative; left: auto; right: auto; bottom: auto; height: 585px; min-height: 585px; margin: 28px -18px 0; }
       .shape-violet { inset: 15px 0 0 0; }
       .photo-print { width: 58%; left: 4%; top: 46px; }
       .photo-print img { height: 250px; }
+      .boat-print { width: 55%; left: 3%; bottom: 30%; padding: 7px; box-shadow: -7px 7px 0 var(--pink); }
       .cutout { height: 72%; right: -11%; bottom: 4%; }
       .portrait-caption { right: 6%; bottom: 24px; width: 88%; padding: 11px 14px 12px; font-size: 13px; }
       .portrait-caption strong { font-size: 18px; }
@@ -921,6 +942,7 @@
         <div class="shape-violet"></div>
         <div class="shape-orange"></div>
         <div class="photo-print"><img src="ulitsa-bazhova-github-pages/assets/hero-map.webp?v=1" alt="" fetchpriority="high"></div>
+        <div class="boat-print"><img src="hero-boat.jpg?v=1" alt="Стрит-арт «Бумажный кораблик» на улице Бажова" fetchpriority="high"></div>
         <img class="cutout" src="ulitsa-bazhova-github-pages/assets/alyona-speaker-cutout.webp?v=1" alt="Алёна Кунилова выступает с микрофоном" fetchpriority="high">
         <div class="portrait-caption"><strong>Алёна Кунилова</strong>, местный житель, городской исследователь, коллекционер локальной идентичности, амбассадор улицы Бажова и автор одноимённого городского паблика</div>
       </div>
