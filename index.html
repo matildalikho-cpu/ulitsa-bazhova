@@ -981,10 +981,15 @@
       .principle h3 {
         margin-top: 25px;
         max-width: 100%;
-        font-size: 40px;
-        line-height: 0.94;
+        font-size: clamp(32px, 9vw, 40px);
         letter-spacing: -1.5px;
-        overflow-wrap: anywhere;
+        overflow-wrap: normal;
+        word-break: normal;
+      }
+      .principle:last-child h3 {
+        font-size: clamp(25px, 7.2vw, 32px);
+        letter-spacing: -1px;
+        white-space: nowrap;
       }
       .gallery-head { display: block; }
       .gallery-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -1101,7 +1106,7 @@
         <article class="walk-format">
           <span class="format-kicker">По расписанию</span>
           <h3>Публичные групповые</h3>
-          <p>Присоединяйтесь к небольшой группе в одну из объявленных дат. Анонсы следующих прогулок публикуются в паблике <a href="https://t.me/ulitsa_bazhova" target="_blank" rel="noreferrer">«Улица Бажова»</a> и в канале сообщества <a href="https://t.me/ekbwalk" target="_blank" rel="noreferrer">«Екбгуляем»</a> (там же ищите анонсы моих коллег, которые проводят свои авторские экскурсии).</p>
+          <p>Присоединяйтесь к небольшой группе в одну из объявленных дат. Анонсы следующих прогулок публикуются в паблике <a href="https://t.me/ulitsa_bazhova" target="_blank" rel="noreferrer">«Улица Бажова»</a> и в канале сообщества <a href="https://t.me/ekbwalk" target="_blank" rel="noreferrer">«Екбгуляем»</a> (там же ищите расписание уникальных прогулок, авторских экскурсий и дрейфов других независимых гидов города).</p>
           <a href="https://ulitsa-bazhova.timepad.ru/events/" target="_blank" rel="noreferrer">Анонсы и билеты на Timepad <span aria-hidden="true">→</span></a>
         </article>
         <article class="walk-format">
