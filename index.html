@@ -32,6 +32,18 @@
   <link rel="preload" href="neucha-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="neucha-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <title>Авторские прогулки по Екатеринбургу с Алёной Куниловой</title>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=110959879','ym');
+
+    ym(110959879,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+  </script>
+  <!-- /Yandex.Metrika counter -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1022,6 +1034,7 @@
   </style>
 </head>
 <body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/110959879" style="position:absolute; left:-9999px;" alt=""></div></noscript>
   <a class="skip-link" href="#main">К содержанию</a>
   <header class="site-header">
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню">☰</button>
@@ -1167,12 +1180,12 @@
               <figure>
                 <a href="https://историясолидарности.рф/" target="_blank" rel="noreferrer">
                   <img src="ulitsa-bazhova-github-pages/assets/project-solidarnost.webp?v=1" alt="Книга проекта «История солидарности»" loading="lazy">
-                  <figcaption>История солидарности · 2021</figcaption>
+                  <figcaption>История солидарности</figcaption>
                 </a>
               </figure>
               <figure>
                 <img src="ulitsa-bazhova-github-pages/assets/project-kod-goroda.webp?v=1" alt="Книга проекта «Код города. Екатеринбург»" loading="lazy">
-                <figcaption>Код города · 2022</figcaption>
+                <figcaption>Код города</figcaption>
               </figure>
             </div>
           </div>
@@ -1272,6 +1285,23 @@
         toggle.setAttribute('aria-expanded', 'false');
         toggle.textContent = '☰';
       });
+    });
+
+    document.addEventListener('click', function (event) {
+      const link = event.target.closest('a');
+      if (!link || typeof window.ym !== 'function') return;
+
+      const href = link.getAttribute('href') || '';
+      let goal = '';
+
+      if (link.classList.contains('primary-cta')) goal = 'hero_routes';
+      else if (href.includes('ulitsa-bazhova.timepad.ru')) goal = 'timepad_tickets';
+      else if (href.includes('t.me/AlyonaRocket')) goal = 'contact_telegram';
+      else if (href.includes('t.me/ulitsa_bazhova')) goal = 'ulitsa_bazhova_telegram';
+      else if (href.includes('t.me/ekbwalk')) goal = 'ekbwalk_telegram';
+      else if (href.startsWith('mailto:')) goal = 'email_click';
+
+      if (goal) ym(110959879, 'reachGoal', goal);
     });
 
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
